@@ -33,18 +33,20 @@ for i in getVuserTable():
 	
 	"""
 import streamlit as st
+import os
+
 
 def main():
-    st.title("File Upload Tutorial")
+    st.subheader("Dataset")
+    data_file = st.file_uploader("Upload CSV",type=["mdb"])
+		
+    if data_file is not None:
 
-    menu = ["Image","Dataset","DocumentFiles","About"]
-    choice = st.sidebar.selectbox("Menu",menu)
+        file_details = {"filename":data_file.name, "filetype":data_file.type,
+                            "filesize":data_file.size}
+			
+        st.write(file_details)
 
-    if choice == "Image":
-        st.subheader("Image")
 
-    elif choice == "Dataset":
-        st.subheader("Dataset")
-
-    elif choice == "DocumentFiles":
-        st.subheader("DocumentFiles")
+if __name__ == '__main__':
+	main()
