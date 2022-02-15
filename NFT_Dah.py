@@ -10,7 +10,7 @@ def main():
 
 		file_details = {"filename":data_file.name, "filetype":data_file.type,"filesize":data_file.size}
 		st.write(file_details)
-
+	
 	def Getrows():
  		arr=[]
 		for row in cursor.tables():
