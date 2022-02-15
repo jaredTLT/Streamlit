@@ -11,12 +11,6 @@ def main():
 		file_details = {"filename":data_file.name, "filetype":data_file.type,"filesize":data_file.size}
 		st.write(file_details)
 	
-	def Getrows():
- 		arr=[]
-		for row in cursor.tables():
-			if 'T7' in row[2]:
-            			arr.append(row[2])
-    				return arr
 	def getFirstCol(name):
 		return cursor.columns(table=name).fetchall()[0].column_name
 
@@ -30,6 +24,12 @@ def main():
 			if getLastCol(row) =="Event Name" and getFirstCol(row)=='Minimum':
 		    	#print(f'SELECT * FROM {row}')
 		    	return cursor.execute(f'SELECT*FROM {row}')
+	def Getrows():
+ 		arr=[]
+		for row in cursor.tables():
+			if 'T7' in row[2]:
+            			arr.append(row[2])
+    				return arr
 
 	conn=pyodbc.connect(data_file)
 	cursor = conn.cursor()
