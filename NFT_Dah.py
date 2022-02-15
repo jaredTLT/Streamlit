@@ -36,8 +36,9 @@ import streamlit as st
 import os
 
 def main():
+	
 	st.subheader("Dataset")
-    	data_file = st.file_uploader("Upload CSV",type=["mdb"])
+    	data_file=st.file_uploader("Upload MDB",type=["mdb"])
 		
    	if data_file is not None:
 
