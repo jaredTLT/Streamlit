@@ -22,8 +22,7 @@ def main():
 	def getVuserTable():
 		for row in Getrows(): 
 			if getLastCol(row) =="Event Name" and getFirstCol(row)=='Minimum':
-		    	#print(f'SELECT * FROM {row}')
-		    	return cursor.execute(f'SELECT*FROM {row}')
+				return cursor.execute(f'SELECT*FROM {row}')
 	def Getrows():
  		arr=[]
 		for row in cursor.tables():
