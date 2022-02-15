@@ -30,7 +30,7 @@ def Getrows():
 		if 'T7' in row[2]:
         		arr.append(row[2])
 	return arr
-for i in data_file"
+for i in data_file:
 	st.write(i)
 #conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ='+data_file.name+';')
 #conn=pyodbc.connect(data_file)
