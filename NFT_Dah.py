@@ -28,8 +28,8 @@ def Getrows():
 	arr=[]
 	for row in cursor.tables():
         	#print(row[2])
-	if 'T7' in row[2]:
-        	arr.append(row[2])
+		if 'T7' in row[2]:
+        		arr.append(row[2])
 	return arr
 
 	#conn=pyodbc.connect(data_file)
