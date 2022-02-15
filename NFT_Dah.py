@@ -24,11 +24,12 @@ def main():
 			if getLastCol(row) =="Event Name" and getFirstCol(row)=='Minimum':
 				return cursor.execute(f'SELECT*FROM {row}')
 	def Getrows():
- 		arr=[]
+		arr=[]
 		for row in cursor.tables():
+        	#print(row[2])
 			if 'T7' in row[2]:
             			arr.append(row[2])
-    		return arr
+   		return arr
 
 	conn=pyodbc.connect(data_file)
 	cursor = conn.cursor()
