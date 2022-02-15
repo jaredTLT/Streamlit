@@ -1,7 +1,7 @@
 import streamlit as st
 import os
 import pyodbc
-
+import tempfile
 	
 st.subheader("Dataset")
 data_file=st.file_uploader("Upload MDB",type=["mdb"])
@@ -31,7 +31,7 @@ def Getrows():
         		arr.append(row[2])
 	return arr
 
-conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=https://share.streamlit.io/jaredtlt/streamlit/main/NFT_Dah.py/'+data_file.name+';')
+conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ='+data_file.name+';')
 #conn=pyodbc.connect(data_file)
 cursor = conn.cursor()
 getVuserTable()
