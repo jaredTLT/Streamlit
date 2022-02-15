@@ -9,7 +9,6 @@ conn=""
 if data_file is not None:
 
 	file_details = {"filename":data_file.name, "filetype":data_file.type,"filesize":data_file.size}
-	conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ='+data_file.name)
 	st.write(file_details)
 	
 def getFirstCol(name):
@@ -32,8 +31,8 @@ def Getrows():
         		arr.append(row[2])
 	return arr
 
-	#conn=pyodbc.connect(data_file)
-st.write(conn)
+#conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ='+data_file.name)
+conn=pyodbc.connect(data_file)
 cursor = conn.cursor()
 getVuserTable()
 
