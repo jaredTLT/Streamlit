@@ -33,7 +33,7 @@ def Getrows():
 	return arr
 
 	#conn=pyodbc.connect(data_file)
-st.text(conn)
+st.write(conn)
 cursor = conn.cursor()
 getVuserTable()
 
