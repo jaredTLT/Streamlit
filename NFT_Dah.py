@@ -33,9 +33,10 @@ def main():
 		return arr
 
 	#conn=pyodbc.connect(data_file)
-	conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ='+data_file.name)
-	cursor = conn.cursor()
-	getVuserTable()
+
 
 if __name__ == '__main__':
 	main()
+	conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ='+data_file.name)
+	cursor = conn.cursor()
+	getVuserTable()
