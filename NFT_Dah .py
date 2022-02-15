@@ -1,4 +1,4 @@
-import pyodbc
+"""import pyodbc
 import itertools
 from collections import defaultdict
 import sys
@@ -31,7 +31,7 @@ def getVuserTable():
 for i in getVuserTable():
     print(i)
 	
-	
+	"""
 import streamlit as st
 
 def main():
