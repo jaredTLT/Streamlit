@@ -28,7 +28,7 @@ def main():
 		for row in cursor.tables():
 			if 'T7' in row[2]:
             			arr.append(row[2])
-    				return arr
+    		return arr
 
 	conn=pyodbc.connect(data_file)
 	cursor = conn.cursor()
