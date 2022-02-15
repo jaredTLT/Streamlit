@@ -11,7 +11,6 @@ def main():
 
 		file_details = {"filename":data_file.name, "filetype":data_file.type,"filesize":data_file.size}
 		conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ='+data_file.name)
-		cursor = conn.cursor()
 		st.write(file_details)
 	
 	def getFirstCol(name):
@@ -35,6 +34,7 @@ def main():
 		return arr
 
 	#conn=pyodbc.connect(data_file)
+	cursor = conn.cursor()
 	getVuserTable()
 
 if __name__ == '__main__':
