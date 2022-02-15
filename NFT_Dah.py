@@ -6,7 +6,7 @@ def main():
 	st.subheader("Dataset")
 	data_file=st.file_uploader("Upload MDB",type=["mdb"])
 		
-   	if data_file is not None:
+	if data_file is not None:
 
 		file_details = {"filename":data_file.name, "filetype":data_file.type,
                             "filesize":data_file.size}
