@@ -34,7 +34,7 @@ def Getrows():
 
 #file = io.StringIO(data_file)
 for row in data_file:
-	st.write(row..decode('UTF-8'))
+	st.write(row.decode('UTF-8'))
 #conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ='+data_file.name+';')
 #conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ='+data_file.name+';')
 #conn=pyodbc.connect(data_file)
