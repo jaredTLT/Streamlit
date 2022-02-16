@@ -2,6 +2,7 @@ import streamlit as st
 import os
 import pyodbc
 import tempfile
+import io
 	
 st.subheader("Dataset")
 data_file=st.file_uploader("Upload MDB",type=["mdb"])
@@ -31,8 +32,11 @@ def Getrows():
         		arr.append(row[2])
 	return arr
 
+file = io.StringIO(data_file.decode())
+for line in file:
+	print(line.strip())
 #conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ='+data_file.name+';')
-conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ='+data_file.name+';')
+#conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ='+data_file.name+';')
 #conn=pyodbc.connect(data_file)
 #cursor = conn.cursor()
 getVuserTable()
