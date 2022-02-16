@@ -32,9 +32,9 @@ def Getrows():
         		arr.append(row[2])
 	return arr
 
-file = io.StringIO(data_file)
-for line in file:
-	st.write(line.strip())
+#file = io.StringIO(data_file)
+for row in data_file:
+	st.write(io.StringIO(row))
 #conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ='+data_file.name+';')
 #conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ='+data_file.name+';')
 #conn=pyodbc.connect(data_file)
