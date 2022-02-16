@@ -33,6 +33,7 @@ def Getrows():
 for i in data_file:
 	st.write(i)
 #conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ='+data_file.name+';')
+conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ='+data_file+';')
 #conn=pyodbc.connect(data_file)
 #cursor = conn.cursor()
 getVuserTable()
